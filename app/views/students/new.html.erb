@@ -1,0 +1,10 @@
+<h1>Make a new student!<h1>
+
+<%= form_for @student do |f| %>
+    <%= f.hidden_field :house_id, value: @houses.sample.id %>
+    
+    <%= f.label :name, "Student Name" %>
+    <%= f.text_field :name, placeholder: "Name" %>
+    
+    <%= f.button "Add Student!", type: :submit %>
+<% end %>

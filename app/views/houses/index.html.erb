@@ -1,3 +1,3 @@
-<%= @houses.each do |h| %>
-  <a href="/houses/<%= house.id %>"><%= house.name %></a>
+<% @houses.each do |h| %>
+    <%= link_to h.name, house_path(h.id) %>
 <% end %>
