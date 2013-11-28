@@ -1,6 +1,14 @@
-<% @house.name %>
+<%= @house.name %>
+
 <ul>
-<% @house.students.each |student| %>
-  <li><%= student.name %></li></li>
+    <% unless @house.students.nil? %>
+    
+        <% @house.students.each do |s| %>
+            <li><%= s.name %></li>
+        <% end %>
+        
+    <% else %>
+        <li>No students</li>
+    <% end %>
+    
 </ul>
-<% end %>
