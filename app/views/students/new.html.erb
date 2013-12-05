@@ -1,8 +1,8 @@
 <h1>Make a new student!</h1>
 
-<form action="/students" method="post">
-  <label>Student Name<lable>
+<%= form_for :student, url: { action: :create } do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
-  <input type="text" name="name">
-  <input type="submit" value="Add Student!">
-</form>
+  <%= f.submit 'Add Student!' %>
+<% end %>

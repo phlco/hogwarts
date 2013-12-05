@@ -2,6 +2,8 @@
 
 <ul>
   <% @house.students.each do |student| %>
-    <li><%= student.name %></li>
+    <li>
+      <%= link_to student.name, student_url(student) %>
+    </li>
   <% end %>
 </ul>

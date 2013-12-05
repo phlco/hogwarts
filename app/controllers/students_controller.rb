@@ -13,7 +13,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    if student = Student.create({ name: params[:name] })
+    if student = Student.create(params[:student])
       house = House.all.shuffle.first
 
       house.students << student
